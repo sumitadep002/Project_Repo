@@ -1,0 +1,8 @@
+/* Define classes for green and red LEDs */
+.led-green {
+    background-color: green;
+}
+
+.led-red {
+    background-color: red;
+}
