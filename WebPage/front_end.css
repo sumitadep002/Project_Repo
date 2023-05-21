@@ -1,8 +1,23 @@
-/* Define classes for green and red LEDs */
-.led-green {
-    background-color: green;
+.container {
+    text-align: center;
+    margin-top: 50px;
 }
 
-.led-red {
-    background-color: red;
+h1, h2, h3 {
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+#led1Status, #led2Status {
+    color: #666;
 }
