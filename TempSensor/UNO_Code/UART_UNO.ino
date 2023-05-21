@@ -1,15 +1,23 @@
 char ack = '0';
-void setup{
-  Serial.begin(9600);
-  while(!Serial.available);
-  ack = Serial.Read();
-  delay(10);
+char input_buffer[50];
+char output_buffer[50];
+int handshake(){
+
+  while(!Serial.available());
+  ack = Serial.read();
+  delay(20);
+  Serial.write("okay i got you");
   if(ack == '1')
-  Serial.Write("Okay i got you");
-
+  return 1;
+  else
+  return 0;
 }
-void loop
+void setup()
 {
-
+  Serial.begin(9600);
+}
+void loop()
+{
+  handshake();
   
 }
