@@ -6,13 +6,14 @@ document.getElementById('led1').addEventListener('click', function() {
         led1.classList.add('led-red');
 
         // Send request with value 13 to the server
-        sendRequest('http://123.456.789.123:1234', 11);
+        sendRequest('http://10.132.238.47:1234', 11);
     } else {
         led1.classList.remove('led-red');
         led1.classList.add('led-green');
 
         // Send request with value 12 to the server
-        sendRequest('http://123.456.789.123:1234', 12);
+        sendRequest('http://10.132.238.47:1234', 12);
+        console.log("Hello")
     }
 });
 
