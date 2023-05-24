@@ -1,0 +1,13 @@
+Approximation of project task
+
+1) from 22 May to 26 May 
+-> Voltage rating
+-> temperature rating
+-> have to learn about the ADCs of MCU
+-> Define the functions for LEDControl, getVoltage, getTemperature
+
+2) from 29 May to 29 May 
+-> AT commands 
+-> work on how to send/receive data from created page
+-> how to communicate with STM32
+-> also have to implement some functions like: sendVoltage, sendTemp, sendLedstatus, LEDRequests
