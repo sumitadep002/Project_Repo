@@ -1,0 +1,182 @@
+15:42:12 **** Incremental Build of configuration Debug for project External_Temp_Sensor_Reading ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:111:15: warning: implicit declaration of function 'log' [-Wimplicit-function-declaration]
+  111 |        Temp = log((10240000/RawADC) – 10000);
+      |               ^~~
+../Core/Src/main.c:111:15: warning: incompatible implicit declaration of built-in function 'log'
+../Core/Src/main.c:21:1: note: include '<math.h>' or provide a declaration of 'log'
+   20 | #include "main.h"
+  +++ |+#include <math.h>
+   21 | 
+../Core/Src/main.c:111:37: error: stray '\342' in program
+  111 |        Temp = log((10240000/RawADC) – 10000);
+      |                                     ^
+../Core/Src/main.c:111:36: error: expected ')' before numeric constant
+  111 |        Temp = log((10240000/RawADC) – 10000);
+      |                                    ^  ~~~~~
+      |                                    )
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:126:1: error: expected identifier or '(' before '}' token
+  126 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:49:39 **** Incremental Build of configuration Debug for project External_Temp_Sensor_Reading ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:114:24: warning: implicit declaration of function 'log' [-Wimplicit-function-declaration]
+  114 |        Temp = (10000 * log(resistance/10000))/(3950 * 12) + 25;
+      |                        ^~~
+../Core/Src/main.c:114:24: warning: incompatible implicit declaration of built-in function 'log'
+../Core/Src/main.c:21:1: note: include '<math.h>' or provide a declaration of 'log'
+   20 | #include "main.h"
+  +++ |+#include <math.h>
+   21 | 
+arm-none-eabi-gcc -o "External_Temp_Sensor_Reading.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\proffessional stuff\scaledge\Internal_Project\practiceProgramming\STM32F33\New folder\External_Temp_Sensor_Reading\STM32F334C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="External_Temp_Sensor_Reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: External_Temp_Sensor_Reading.elf
+ 
+arm-none-eabi-size   External_Temp_Sensor_Reading.elf 
+arm-none-eabi-objdump -h -S  External_Temp_Sensor_Reading.elf  > "External_Temp_Sensor_Reading.list"
+   text	   data	    bss	    dec	    hex	filename
+  16980	    120	   1672	  18772	   4954	External_Temp_Sensor_Reading.elf
+Finished building: default.size.stdout
+ 
+Finished building: External_Temp_Sensor_Reading.list
+ 
+15:50:08 **** Incremental Build of configuration Debug for project External_Temp_Sensor_Reading ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "External_Temp_Sensor_Reading.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\proffessional stuff\scaledge\Internal_Project\practiceProgramming\STM32F33\New folder\External_Temp_Sensor_Reading\STM32F334C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="External_Temp_Sensor_Reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: External_Temp_Sensor_Reading.elf
+ 
+arm-none-eabi-size   External_Temp_Sensor_Reading.elf 
+arm-none-eabi-objdump -h -S  External_Temp_Sensor_Reading.elf  > "External_Temp_Sensor_Reading.list"
+   text	   data	    bss	    dec	    hex	filename
+  16980	    120	   1672	  18772	   4954	External_Temp_Sensor_Reading.elf
+Finished building: default.size.stdout
+ 
+Finished building: External_Temp_Sensor_Reading.list
+ 
+15:51:25 **** Incremental Build of configuration Debug for project External_Temp_Sensor_Reading ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "External_Temp_Sensor_Reading.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\proffessional stuff\scaledge\Internal_Project\practiceProgramming\STM32F33\New folder\External_Temp_Sensor_Reading\STM32F334C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="External_Temp_Sensor_Reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: External_Temp_Sensor_Reading.elf
+ 
+arm-none-eabi-size   External_Temp_Sensor_Reading.elf 
+arm-none-eabi-objdump -h -S  External_Temp_Sensor_Reading.elf  > "External_Temp_Sensor_Reading.list"
+   text	   data	    bss	    dec	    hex	filename
+  16980	    120	   1672	  18772	   4954	External_Temp_Sensor_Reading.elf
+Finished building: default.size.stdout
+ 
+Finished building: External_Temp_Sensor_Reading.list
+ 
+15:54:19 **** Incremental Build of configuration Debug for project External_Temp_Sensor_Reading ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:18: warning: implicit declaration of function 'HAL_ADC_GetVref'; did you mean 'HAL_ADC_GetError'? [-Wimplicit-function-declaration]
+  109 |     float vref = HAL_ADC_GetVref(&hadc1);
+      |                  ^~~~~~~~~~~~~~~
+      |                  HAL_ADC_GetError
+../Core/Src/main.c:111:6: error: 'VREFIS_3_3' undeclared (first use in this function); did you mean 'VREF_3_3'?
+  111 |      VREFIS_3_3 =1;
+      |      ^~~~~~~~~~
+      |      VREF_3_3
+../Core/Src/main.c:111:6: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:59:33 **** Incremental Build of configuration Debug for project External_Temp_Sensor_Reading ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:118:38: error: stray '\342' in program
+  118 |        Temp = log(((40960000/RawADC) – 10000));
+      |                                      ^
+../Core/Src/main.c:118:37: error: expected ')' before numeric constant
+  118 |        Temp = log(((40960000/RawADC) – 10000));
+      |                   ~                 ^  ~~~~~
+      |                                     )
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:00:06 **** Incremental Build of configuration Debug for project External_Temp_Sensor_Reading ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:118:38: error: stray '\342' in program
+  118 |        Temp = log(((40960000/RawADC) – 10000));
+      |                                      ^
+../Core/Src/main.c:118:37: error: expected ')' before numeric constant
+  118 |        Temp = log(((40960000/RawADC) – 10000));
+      |                   ~                 ^  ~~~~~
+      |                                     )
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:00:25 **** Incremental Build of configuration Debug for project External_Temp_Sensor_Reading ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:118:37: error: stray '\342' in program
+  118 |        Temp = log((40960000/RawADC) – 10000);
+      |                                     ^
+../Core/Src/main.c:118:36: error: expected ')' before numeric constant
+  118 |        Temp = log((40960000/RawADC) – 10000);
+      |                                    ^  ~~~~~
+      |                                    )
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:00:57 **** Incremental Build of configuration Debug for project External_Temp_Sensor_Reading ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:118:36: error: stray '\342' in program
+  118 |        Temp = log((40960000/RawADC)–10000);
+      |                                    ^
+../Core/Src/main.c:118:36: error: expected ')' before numeric constant
+  118 |        Temp = log((40960000/RawADC)–10000);
+      |                                    ^~~~~~
+      |                                    )
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:01:42 **** Incremental Build of configuration Debug for project External_Temp_Sensor_Reading ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:29: error: 'rawADC' undeclared (first use in this function); did you mean 'RawADC'?
+  119 |        Temp = log((40960000/rawADC)-10000);
+      |                             ^~~~~~
+      |                             RawADC
+../Core/Src/main.c:119:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:01:53 **** Incremental Build of configuration Debug for project External_Temp_Sensor_Reading ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "External_Temp_Sensor_Reading.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\proffessional stuff\scaledge\Internal_Project\practiceProgramming\STM32F33\New folder\External_Temp_Sensor_Reading\STM32F334C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="External_Temp_Sensor_Reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: External_Temp_Sensor_Reading.elf
+ 
+arm-none-eabi-size   External_Temp_Sensor_Reading.elf 
+arm-none-eabi-objdump -h -S  External_Temp_Sensor_Reading.elf  > "External_Temp_Sensor_Reading.list"
+   text	   data	    bss	    dec	    hex	filename
+  16836	    120	   1664	  18620	   48bc	External_Temp_Sensor_Reading.elf
+Finished building: default.size.stdout
+ 
+Finished building: External_Temp_Sensor_Reading.list
+ 
+17:05:26 **** Incremental Build of configuration Debug for project External_Temp_Sensor_Reading ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "External_Temp_Sensor_Reading.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\proffessional stuff\scaledge\Internal_Project\practiceProgramming\STM32F33\New folder\External_Temp_Sensor_Reading\STM32F334C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="External_Temp_Sensor_Reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: External_Temp_Sensor_Reading.elf
+ 
+arm-none-eabi-size   External_Temp_Sensor_Reading.elf 
+arm-none-eabi-objdump -h -S  External_Temp_Sensor_Reading.elf  > "External_Temp_Sensor_Reading.list"
+   text	   data	    bss	    dec	    hex	filename
+  13064	     20	   1652	  14736	   3990	External_Temp_Sensor_Reading.elf
+Finished building: default.size.stdout
+ 
+Finished building: External_Temp_Sensor_Reading.list
+ 
