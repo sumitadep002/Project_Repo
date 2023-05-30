@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LED Control</title>
-    <link rel="stylesheet" type="text/css" href="front_end.css">
+    <title>ESP8266 Control Panel</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>LED Control</h1>
-    <button id="led1">LED 1</button>
-    <button id="led2">LED 2</button>
-    <script src="functionalities.js"></script>
+    <div class="container">
+        <h1>ESP8266 Control Panel</h1>
+
+        <div>
+            <h2>LED 1 Control</h2>
+            <button onclick="toggleLED('led1')">Toggle LED 1</button>
+            <p id="led1Status">Status: Unknown</p>
+        </div>
+
+        <div>
+            <h2>LED 2 Control</h2>
+            <button onclick="toggleLED('led2')">Toggle LED 2</button>
+            <p id="led2Status">Status: Unknown</p>
+        </div>
+
+        <div>
+            <h2>Real-Time Ratings</h2>
+            <div>
+                <h3>Voltage Rating:</h3>
+                <span id="voltageValue">Loading...</span>
+            </div>
+            <div>
+                <h3>Temperature Rating:</h3>
+                <span id="temperatureValue">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
